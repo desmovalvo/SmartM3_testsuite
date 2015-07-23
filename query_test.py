@@ -20,6 +20,7 @@ sib_list = {}
 owl_list = []
 query_results = {}
 loadonly = False
+clean = False
 
 # print helper
 def cprint(status, phase, message):
