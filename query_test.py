@@ -4,6 +4,7 @@
 import csv
 import sys
 import glob
+import pygal
 import getopt
 import timeit
 import datetime
@@ -26,6 +27,22 @@ def cprint(status, phase, message):
     else:
         print colored(phase + "> ", "red", attrs=["bold"]) + message
 
+# help string
+help_string = """
+query_test - parameters:
+
+--owl=folder -> loads every owl file contained in the folder
+--queryfile=file -> loads every query contained in the file* (omit the .py extension)
+--query=queryname -> the name of the query to be tested
+--sibs=SIBip1:SIBport1:SIBdesc1%...%SIBipN:SIBportN:SIBdescN -> to specify the SIBs to test
+--iterations=N -> how many time the test must be repeated
+--clean -> tells the program to clean the SIBs before starting the test
+--loadonly -> exits after loading the ontologies
+--help -> shows this message
+
+* the query file must contain a dictionary named query where each value
+contains the SPARQL query and the key is the name of the query
+"""
 
 # read command line parameters
 # paramters are:
@@ -34,8 +51,7 @@ def cprint(status, phase, message):
 # - SIBs to be queried (this is a list of sib specified as SIB_ADDRESS1:SIB_PORT1:NAME%SIB_ADDRESS2:SIB_PORT2:NAME2%...)
 # - number of iterations
 
-cprint(True, "Init", "Reading command line parameters")
-options, remainder = getopt.getopt(sys.argv[1:], 'o:f:q:s:i:cl', ['owl=', 'queryfile=', 'query=', 'sibs=', 'iterations=', 'clean', 'loadonly'])
+options, remainder = getopt.getopt(sys.argv[1:], 'o:f:q:s:i:clh', ['owl=', 'queryfile=', 'query=', 'sibs=', 'iterations=', 'clean', 'loadonly', 'help'])
 for opt, arg in options:
 
     if opt in ('-o', '--owl'):
@@ -67,6 +83,12 @@ for opt, arg in options:
 
     elif opt in ('-l', '--loadonly'):
         loadonly = True
+
+    elif opt in ('-h', '--help'):
+        print help_string
+        sys.exit()
+
+cprint(True, "Init", "Read command line parameters")
 
 # generate the name for the output files
 d = datetime.datetime.now().strftime("%Y%m%d%H%M")
