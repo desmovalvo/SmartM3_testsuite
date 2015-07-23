@@ -10,6 +10,7 @@ import timeit
 import datetime
 from termcolor import *
 from smart_m3.m3_kp_api import *
+from pygal.style import LightColorizedStyle
 
 # initial variables
 cleaner = """DELETE { ?s ?p ?o }
@@ -111,6 +112,10 @@ for k in sib_list.keys():
 csv_file_stream = open(csv_file, "w")
 csv_file_writer = csv.writer(csv_file_stream, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 
+# initialize and configure the svg file
+bar_chart = pygal.Bar(style=LightColorizedStyle, x_title="", y_title="Time (ms)")
+bar_chart.title = """Time to perform query %s""" % (query_name)
+
 # iterate
 for kp in kp_list:
     
@@ -139,15 +144,17 @@ for kp in kp_list:
         sum += el
     avg = sum / len(query_results[kp_list.index(kp)])
 
-    # write the CSV file
+    # write the CSV file and plot the graph
     row = []
     row.append(kp.__dict__["theSmartSpace"][0])
     for qr in query_results[kp_list.index(kp)]:
         row.append(round(qr,3))
     row.append(round(avg,3))
     csv_file_writer.writerow(row)
-    
-# TODO: plot graph
+    bar_chart.add(kp.__dict__["theSmartSpace"][0], avg)
+
+# render the svg graph
+bar_chart.render_to_file(svg_file)
 
 # Close csv file
 csv_file_stream.close()
