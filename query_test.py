@@ -19,6 +19,7 @@ kp_list = []
 sib_list = {}
 owl_list = []
 query_results = {}
+query_results_number = {}
 loadonly = False
 clean = False
 
@@ -136,7 +137,18 @@ for kp in kp_list:
     query_results[kp_list.index(kp)] = []
     for i in range(iterations):
         cprint(True, "Test", "Performing query %s on %s (iteration %s)" % (query_name, kp.__dict__["theSmartSpace"][0], i))
-        query_time = timeit.timeit(lambda: kp.load_query_sparql(query_text), number = 1)
+        try:
+            query_time = timeit.timeit(lambda: kp.load_query_sparql(query_text), number = 1)
+
+            if i == (iterations-1):
+                
+                # check the number of results
+                query_results_number[kp_list.index(kp)] = len(kp.result_sparql_query)
+
+        except Exception as e:
+            print e.__str__()
+            query_time = 0
+
         query_results[kp_list.index(kp)].append(query_time)
 
     # compute the average
@@ -151,6 +163,7 @@ for kp in kp_list:
     for qr in query_results[kp_list.index(kp)]:
         row.append(round(qr,3))
     row.append(round(avg,3))
+    row.append(query_results_number[kp_list.index(kp)])
     csv_file_writer.writerow(row)
     bar_chart.add(kp.__dict__["theSmartSpace"][0], avg)
 
