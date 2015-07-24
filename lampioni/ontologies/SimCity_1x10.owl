@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+	<!ENTITY blank 'http://notauri/blank#'>
+	<!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+	<!ENTITY duca 'http://www.ducatienergia.com/SIIP2P.owl#'>
+]>
+<rdf:RDF xmlns:rdfs="&rdfs;" xmlns:xsd="&xsd;" xmlns="http://www.ducatienergia.com/SIIP2P.owl#" xmlns:blank="&blank;" xmlns:owl="&owl;" xmlns:duca="&duca;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <owl:NamedIndividual rdf:about="&blank;COC_1003682592">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&blank;LampProfile_1354296590">
+    <duca:HasHourDimmingPair rdf:resource="&duca;HourDimmingPair_1354296603" />
+    <duca:HasHourDimmingPair rdf:resource="&duca;HourDimmingPair_1354296622" />
+    <duca:HasHourDimmingPair rdf:resource="&duca;HourDimmingPair_1354296644" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&blank;LIN_1977165703">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:Ontology rdf:about="http://www.ducatienergia.com/SIIP2P.owl">
+    <rdfs:comment>Ontologia per il sistema di illuminazione intelligenti punto-punto. Progetto la Citta' Pulita. Convenzione di ricerca tra Ducati Energia S.p.a e ARCES@it</rdfs:comment>
+    <owl:versionInfo>1.0@it</owl:versionInfo>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="&duca;BOOL">
+    <rdf:type rdf:resource="&duca;UnitOfMeasure" />
+    <rdfs:label>Booleano</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;BROKEN">
+    <rdf:type rdf:resource="&duca;LampStatus" />
+    <rdfs:label>BROKEN@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;Category">
+    <rdfs:comment>Le sottoclassi di questa classe contengo elementi enumerabili (es. tipo di sensore, tipo di lampada, dati di identificazione)@it</rdfs:comment>
+    <rdfs:label>Category@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Data" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="&duca;CELSIUS">
+    <rdf:type rdf:resource="&duca;UnitOfMeasure" />
+    <rdfs:label>°C@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;CO">
+    <rdf:type rdf:resource="&duca;Measurand" />
+    <rdfs:comment>Grammi di CO@it</rdfs:comment>
+    <rdfs:label>CO@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;CO2">
+    <rdf:type rdf:resource="&duca;Measurand" />
+    <rdfs:comment>Grammi di CO2@it</rdfs:comment>
+    <rdfs:label>CO2@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;COC">
+    <rdf:type rdf:resource="&rdfs;Class" />
+    <rdfs:comment>Nodo di controllo relativo ad una singola strada@it</rdfs:comment>
+    <rdfs:label>COC@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Device" />
+  </owl:Class>
+  <duca:COC rdf:about="&duca;COC_60">
+    <duca:HasIdentificationData rdf:resource="&duca;IdentificationData_60" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_0" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_1" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_2" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_3" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_4" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_5" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_6" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_7" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_8" />
+    <duca:IsConnectedTo rdf:resource="&duca;LIN_60_9" />
+    <rdfs:label>COC_60</rdfs:label>
+  </duca:COC>
+  <owl:Class rdf:about="&duca;Data">
+    <rdfs:comment>Classe che contiene tutti i dati@it</rdfs:comment>
+    <rdfs:label>Data@it</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="&duca;Device">
+    <rdfs:comment>Rappresenta un dispositivo generico@it</rdfs:comment>
+    <rdfs:label>Device@it</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="&duca;DimmingMessage">
+    <rdfs:comment>Messaggio inviato dal centro ad un COC (es. impostare dimming di un lampione)@it</rdfs:comment>
+    <rdfs:label>DimmingMessage@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Message" />
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="&duca;HasActivationHour">
+    <rdfs:comment>Rappresenta l'ora di settaggio del dimming nel seguente formato: CCYY-MM-DDThh:mm:ss@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;HourDimmingPair" />
+    <rdfs:label>HasActivationHour@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="&duca;HasAddress">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Stringa identificativa dell'indirizzo@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;LocationData" />
+    <rdfs:label>HasAddress@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="&duca;HasDimmerValue">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Rappresenta il valore di dimming di una lampada@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;DimmingMessage" />
+    <rdfs:domain rdf:resource="&duca;HourDimmingPair" />
+    <rdfs:domain rdf:resource="&duca;Lamp" />
+    <rdfs:label>HasDimmerValue@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasHourDimmingPair">
+    <rdfs:comment>Lega il profilo di una lampada alle varie coppie ora:dimming@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;LampProfile" />
+    <rdfs:label>HasHourDimmingPair@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;HourDimmingPair" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasIdentificationData">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Consente di collegare un dispositivo ai propri dati identificativi@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;COC" />
+    <rdfs:domain rdf:resource="&duca;Lamp" />
+    <rdfs:domain rdf:resource="&duca;LIN" />
+    <rdfs:domain rdf:resource="&duca;ModemPLC" />
+    <rdfs:domain rdf:resource="&duca;Sensor" />
+    <rdfs:label>HasIdentificationData@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;IdentificationData" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasIdentificationType">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Tipo del dato identificativo@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;IdentificationData" />
+    <rdfs:label>HasIdentificationType@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;IdentificationType" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="&duca;HasIdentificationValue">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Valore letterale di un dato identificativo@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;IdentificationData" />
+    <rdfs:label>HasIdentificationValue@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasLamp">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Propriet? che collega un LIN alla lampada controllata@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;LIN" />
+    <rdfs:label>HasLamp@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;Lamp" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasLampProfile">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Collega ogni singola strada (CIOC) con il suo profilo di illuminazione (ora:dimming)@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;COC" />
+    <rdfs:label>HasLampProfile@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;LampProfile" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasLampStatus">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Collega una lampada con il suo stato di funzionamento@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;Lamp" />
+    <rdfs:label>HasLampStatus@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;LampStatus" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasLampType">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Consente di specificare il tipo di lampada (es. SAP o LED)@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;Lamp" />
+    <rdfs:label>HasLampType@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;LampType" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="&duca;HasLatitude">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Latitudine espressa in gradi decimali@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;LocationData" />
+    <rdfs:label>HasLatitude@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasLocationData">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Collega un elemento ai suoi dati di localizzazione@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;LIN" />
+    <rdfs:label>HasLocationData@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;LocationData" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="&duca;HasLongitude">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Longitudine espressa in gradi decimali@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;LocationData" />
+    <rdfs:label>HasLongitude@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasMeasurand">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Lega un dato fornito da un sensore con la grandezza misurata@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;SensorData" />
+    <rdfs:label>HasMeasurand@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;Measurand" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasMessageDestination">
+    <rdfs:comment>Permette di specificare il destinatario di un messaggio@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;DimmingMessage" />
+    <rdfs:domain rdf:resource="&duca;Message" />
+    <rdfs:label>HasMessageDestination@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;COC" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasModemPLC">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Lega un COC o un LIN al relativo modem PLC@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;COC" />
+    <rdfs:domain rdf:resource="&duca;LIN" />
+    <rdfs:label>HasModemPLC@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;ModemPLC" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasSensor">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Proprieta' che stabilisce quali dispositivi hanno dei sensori@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;LIN" />
+    <rdfs:label>HasSensor@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;Sensor" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasSensorData">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Propriet? che lega un sensore ai dati che fornisce@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;Sensor" />
+    <rdfs:label>HasSensorData@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;SensorData" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="&duca;HasSensorDataValue">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Valore numerico della grandezza fisica misurata@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;SensorData" />
+    <rdfs:label>HasSensorDataValue@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="&duca;HasTimestamp">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Timestamp del dato rilevato da un sensore nel formato CCYY-MM-DDThh:mm:ss@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;SensorData" />
+    <rdfs:label>HasTimestamp@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="&duca;HasUnitOfMeasure">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Lega un dato di un sensore con la sua unita' di misura@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;SensorData" />
+    <rdfs:label>HasUnitOfMeasure@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;UnitOfMeasure" />
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="&duca;HourDimmingPair">
+    <rdfs:comment>Rappresenta la coppia ora:dimming@it</rdfs:comment>
+    <rdfs:label>HourDimmingPair@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Data" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="&duca;HourDimmingPair_1354296603">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;HourDimmingPair_1354296622">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;HourDimmingPair_1354296644">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;HUMIDITY">
+    <rdf:type rdf:resource="&duca;Measurand" />
+    <rdfs:label>Umidità@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;IdentificationData">
+    <rdf:type rdf:resource="&rdfs;Class" />
+    <rdfs:comment>Serve per identificare i vari elementi@it</rdfs:comment>
+    <rdfs:label>IdentificationData@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Data" />
+  </owl:Class>
+  <duca:IdentificationData rdf:about="&duca;IdentificationData_60">
+    <duca:HasIdentificationType rdf:resource="&duca;MAC" />
+    <duca:HasIdentificationValue>60</duca:HasIdentificationValue>
+    <rdfs:label>ID OF COC 60</rdfs:label>
+  </duca:IdentificationData>
+  <owl:Class rdf:about="&duca;IdentificationType">
+    <rdfs:comment>Classe che contiene tutti i tipi di identificazione (es. MAC, ZigBee, RFID)@it</rdfs:comment>
+    <rdfs:label>IdentificationType@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Category" />
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="&duca;IsConnectedTo">
+    <rdf:type rdf:resource="&rdf;Property" />
+    <rdfs:comment>Propriet? che lega un COC ai LIN ad esso collegati@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;COC" />
+    <rdfs:label>IsConnectedTo@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;LIN" />
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="&duca;Lamp">
+    <rdf:type rdf:resource="&rdfs;Class" />
+    <rdfs:comment>Rappresenta una generica lampada@it</rdfs:comment>
+    <rdfs:label>Lamp@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Device" />
+  </owl:Class>
+  <duca:Lamp rdf:about="&duca;Lamp_60_0">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,0@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_1">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,1@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_2">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,2@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_3">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,3@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_4">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,4@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_5">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,5@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_6">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,6@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_7">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,7@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_8">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,8@it</rdfs:label>
+  </duca:Lamp>
+  <duca:Lamp rdf:about="&duca;Lamp_60_9">
+    <duca:HasDimmerValue>0</duca:HasDimmerValue>
+    <duca:HasLampStatus rdf:resource="&duca;OFF" />
+    <duca:HasLampType rdf:resource="&duca;LED" />
+    <rdfs:label>LAMP_60,9@it</rdfs:label>
+  </duca:Lamp>
+  <owl:Class rdf:about="&duca;LampProfile">
+    <rdfs:comment>Rappresenta il profilo di una singola lampada, in cui vengono specificati i valori di intensita' relativi alle varie fasce orarie@it</rdfs:comment>
+    <rdfs:label>LampProfile@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Data" />
+  </owl:Class>
+  <owl:Class rdf:about="&duca;LampStatus">
+    <rdfs:comment>Gli individui di questa classe rappresentano i vari stati di funzionamento di una lampada (es. funzionante, guasta)@it</rdfs:comment>
+    <rdfs:label>LampStatus@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Category" />
+  </owl:Class>
+  <owl:Class rdf:about="&duca;LampType">
+    <rdfs:comment>Permette di enumerare i diversi tipi di lampada@it</rdfs:comment>
+    <rdfs:label>LampType@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Category" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="&duca;LED">
+    <rdf:type rdf:resource="&duca;LampType" />
+    <rdfs:label>LED@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;LIN">
+    <rdf:type rdf:resource="&rdfs;Class" />
+    <rdfs:comment>Lampione intelligente@it</rdfs:comment>
+    <rdfs:label>LIN@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Device" />
+  </owl:Class>
+  <duca:LIN rdf:about="&duca;LIN_60_0">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_0" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_0" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_0" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_0" />
+    <rdfs:label>LIN_60,0@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_1">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_1" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_1" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_1" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_1" />
+    <rdfs:label>LIN_60,1@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_2">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_2" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_2" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_2" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_2" />
+    <rdfs:label>LIN_60,2@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_3">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_3" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_3" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_3" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_3" />
+    <rdfs:label>LIN_60,3@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_4">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_4" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_4" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_4" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_4" />
+    <rdfs:label>LIN_60,4@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_5">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_5" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_5" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_5" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_5" />
+    <rdfs:label>LIN_60,5@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_6">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_6" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_6" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_6" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_6" />
+    <rdfs:label>LIN_60,6@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_7">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_7" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_7" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_7" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_7" />
+    <rdfs:label>LIN_60,7@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_8">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_8" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_8" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_8" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_8" />
+    <rdfs:label>LIN_60,8@it</rdfs:label>
+  </duca:LIN>
+  <duca:LIN rdf:about="&duca;LIN_60_9">
+    <duca:HasLamp rdf:resource="&duca;Lamp_60_9" />
+    <duca:HasLocationData rdf:resource="&duca;LocationData_60_9" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_PRES_60_9" />
+    <duca:HasSensor rdf:resource="&duca;Sensor_TEMP_60_9" />
+    <rdfs:label>LIN_60,9@it</rdfs:label>
+  </duca:LIN>
+  <owl:Class rdf:about="&duca;LocationData">
+    <rdf:type rdf:resource="&rdfs;Class" />
+    <rdfs:comment>Dati relativi alla localizzazione dell'elemento (es. Lat, Lon, Indirizzo)@it</rdfs:comment>
+    <rdfs:label>LocationData@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Data" />
+  </owl:Class>
+  <duca:LocationData rdf:about="&duca;LocationData_60_0">
+    <duca:HasAddress>LIN address -60,-180</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>-180</duca:HasLongitude>
+    <rdfs:label>Location (60,0)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_1">
+    <duca:HasAddress>LIN address -60,-144</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>-144</duca:HasLongitude>
+    <rdfs:label>Location (60,1)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_2">
+    <duca:HasAddress>LIN address -60,-108</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>-108</duca:HasLongitude>
+    <rdfs:label>Location (60,2)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_3">
+    <duca:HasAddress>LIN address -60,-72</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>-72</duca:HasLongitude>
+    <rdfs:label>Location (60,3)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_4">
+    <duca:HasAddress>LIN address -60,-36</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>-36</duca:HasLongitude>
+    <rdfs:label>Location (60,4)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_5">
+    <duca:HasAddress>LIN address -60,0</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>0</duca:HasLongitude>
+    <rdfs:label>Location (60,5)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_6">
+    <duca:HasAddress>LIN address -60,36</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>36</duca:HasLongitude>
+    <rdfs:label>Location (60,6)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_7">
+    <duca:HasAddress>LIN address -60,72</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>72</duca:HasLongitude>
+    <rdfs:label>Location (60,7)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_8">
+    <duca:HasAddress>LIN address -60,108</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>108</duca:HasLongitude>
+    <rdfs:label>Location (60,8)@it</rdfs:label>
+  </duca:LocationData>
+  <duca:LocationData rdf:about="&duca;LocationData_60_9">
+    <duca:HasAddress>LIN address -60,144</duca:HasAddress>
+    <duca:HasLatitude>-60</duca:HasLatitude>
+    <duca:HasLongitude>144</duca:HasLongitude>
+    <rdfs:label>Location (60,9)@it</rdfs:label>
+  </duca:LocationData>
+  <owl:NamedIndividual rdf:about="&duca;MAC">
+    <rdf:type rdf:resource="&duca;IdentificationType" />
+    <rdfs:label>MAC@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;Measurand">
+    <rdfs:comment>Questa classe contiene le varie grandezze misurabili (es. temperatura, umidita', concentrazione, ...)@it</rdfs:comment>
+    <rdfs:label>Measurand@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Category" />
+  </owl:Class>
+  <owl:Class rdf:about="&duca;Message">
+    <rdfs:comment>Messaggio di controllo generico@it</rdfs:comment>
+    <rdfs:label>Message@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Data" />
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="&duca;MessageForLIN">
+    <rdfs:comment>Permette di specificare il LIN destinatario di un messaggio di dimming@it</rdfs:comment>
+    <rdfs:domain rdf:resource="&duca;DimmingMessage" />
+    <rdfs:label>MessageForLIN@it</rdfs:label>
+    <rdfs:range rdf:resource="&duca;LIN" />
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="&duca;MG">
+    <rdf:type rdf:resource="&duca;UnitOfMeasure" />
+    <rdfs:label>mg@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;ModemPLC">
+    <rdfs:comment>Utilizzato per descrivere un modem PLC@it</rdfs:comment>
+    <rdfs:label>ModemPLC@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Device" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="&duca;OFF">
+    <rdf:type rdf:resource="&duca;LampStatus" />
+    <rdfs:label>OFF@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;ON">
+    <rdf:type rdf:resource="&duca;LampStatus" />
+    <rdfs:label>ON@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;PERCENTAGE">
+    <rdf:type rdf:resource="&duca;UnitOfMeasure" />
+    <rdfs:label>%@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;PLC">
+    <rdf:type rdf:resource="&duca;IdentificationType" />
+    <rdfs:label>PLC@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;PPM">
+    <rdf:type rdf:resource="&duca;UnitOfMeasure" />
+    <rdfs:label>ppm@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;PRESENCE">
+    <rdf:type rdf:resource="&duca;Measurand" />
+    <rdfs:label>Presenza</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;SAP">
+    <rdf:type rdf:resource="&duca;LampType" />
+    <rdfs:label>SAP@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;Sensor">
+    <rdf:type rdf:resource="&rdfs;Class" />
+    <rdfs:comment>Rappresenta un generico sensore@it</rdfs:comment>
+    <rdfs:label>Sensor@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Device" />
+  </owl:Class>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_0">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_0" />
+    <rdfs:label>SENSOR_PRES_60,0@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_1">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_1" />
+    <rdfs:label>SENSOR_PRES_60,1@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_2">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_2" />
+    <rdfs:label>SENSOR_PRES_60,2@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_3">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_3" />
+    <rdfs:label>SENSOR_PRES_60,3@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_4">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_4" />
+    <rdfs:label>SENSOR_PRES_60,4@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_5">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_5" />
+    <rdfs:label>SENSOR_PRES_60,5@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_6">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_6" />
+    <rdfs:label>SENSOR_PRES_60,6@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_7">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_7" />
+    <rdfs:label>SENSOR_PRES_60,7@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_8">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_8" />
+    <rdfs:label>SENSOR_PRES_60,8@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_PRES_60_9">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_PRES_60_9" />
+    <rdfs:label>SENSOR_PRES_60,9@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_0">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_0" />
+    <rdfs:label>SENSOR_TEMP_60,0@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_1">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_1" />
+    <rdfs:label>SENSOR_TEMP_60,1@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_2">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_2" />
+    <rdfs:label>SENSOR_TEMP_60,2@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_3">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_3" />
+    <rdfs:label>SENSOR_TEMP_60,3@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_4">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_4" />
+    <rdfs:label>SENSOR_TEMP_60,4@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_5">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_5" />
+    <rdfs:label>SENSOR_TEMP_60,5@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_6">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_6" />
+    <rdfs:label>SENSOR_TEMP_60,6@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_7">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_7" />
+    <rdfs:label>SENSOR_TEMP_60,7@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_8">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_8" />
+    <rdfs:label>SENSOR_TEMP_60,8@it</rdfs:label>
+  </duca:Sensor>
+  <duca:Sensor rdf:about="&duca;Sensor_TEMP_60_9">
+    <duca:HasSensorData rdf:resource="&duca;SensorData_TEMP_60_9" />
+    <rdfs:label>SENSOR_TEMP_60,9@it</rdfs:label>
+  </duca:Sensor>
+  <owl:Class rdf:about="&duca;SensorData">
+    <rdf:type rdf:resource="&rdfs;Class" />
+    <rdfs:comment>Rappresenta i dati forniti dai sensori@it</rdfs:comment>
+    <rdfs:label>SensorData@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Data" />
+  </owl:Class>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_0">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,0@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_1">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,1@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_2">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,2@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_3">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,3@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_4">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,4@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_5">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,5@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_6">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,6@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_7">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,7@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_8">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,8@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_PRES_60_9">
+    <duca:HasMeasurand rdf:resource="&duca;PRESENCE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;BOOL" />
+    <rdfs:label>SensorData_PRES_60,9@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_0">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,0@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_1">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,1@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_2">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,2@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_3">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,3@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_4">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,4@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_5">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,5@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_6">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,6@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_7">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,7@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_8">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,8@it</rdfs:label>
+  </duca:SensorData>
+  <duca:SensorData rdf:about="&duca;SensorData_TEMP_60_9">
+    <duca:HasMeasurand rdf:resource="&duca;TEMPERATURE" />
+    <duca:HasSensorDataValue>??</duca:HasSensorDataValue>
+    <duca:HasTimestamp>??</duca:HasTimestamp>
+    <duca:HasUnitOfMeasure rdf:resource="&duca;CELSIUS" />
+    <rdfs:label>SensorData_TEMP_60,9@it</rdfs:label>
+  </duca:SensorData>
+  <owl:NamedIndividual rdf:about="&duca;SERIALNUMBER">
+    <rdf:type rdf:resource="&duca;IdentificationType" />
+    <rdfs:label>SERIALNUMBER@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;TEMPERATURE">
+    <rdf:type rdf:resource="&duca;Measurand" />
+    <rdfs:label>Temperatura@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&duca;THRESHOLD">
+    <rdf:type rdf:resource="&duca;UnitOfMeasure" />
+    <rdfs:label>soglia@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&duca;UnitOfMeasure">
+    <rdfs:comment>Gli individui di questa classe rappresentano le varie unita' di misura@it</rdfs:comment>
+    <rdfs:label>UnitOfMeasure@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&duca;Category" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="&duca;ZIGBEE">
+    <rdf:type rdf:resource="&duca;IdentificationType" />
+    <rdfs:label>ZIGBEE@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&rdf;Property">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <rdf:Property rdf:about="&rdfs;label">
+    <rdf:type rdf:resource="&rdf;Property" />
+  </rdf:Property>
+  <owl:Class rdf:about="&owl;Class">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;DatatypeProperty">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;FunctionalProperty">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;NamedIndividual">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;ObjectProperty">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;Ontology">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+</rdf:RDF>

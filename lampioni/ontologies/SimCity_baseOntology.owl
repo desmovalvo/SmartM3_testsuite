@@ -1,0 +1,831 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY blank "http://notauri/blank#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY duca "http://www.ducatienergia.com/SIIP2P.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ducatienergia.com/SIIP2P.owl#"
+     xml:base="http://www.ducatienergia.com/SIIP2P.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:blank="http://notauri/blank#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:duca="http://www.ducatienergia.com/SIIP2P.owl#">
+    <owl:Ontology rdf:about="http://www.ducatienergia.com/SIIP2P.owl">
+        <rdfs:comment>Ontologia per il sistema di illuminazione intelligenti punto-punto. Progetto la Citta&#39; Pulita. Convenzione di ricerca tra Ducati Energia S.p.a e ARCES@it</rdfs:comment>
+        <owl:versionInfo>1.0@it</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasHourDimmingPair -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasHourDimmingPair">
+        <rdfs:label>HasHourDimmingPair@it</rdfs:label>
+        <rdfs:comment>Lega il profilo di una lampada alle varie coppie ora:dimming@it</rdfs:comment>
+        <rdfs:range rdf:resource="&duca;HourDimmingPair"/>
+        <rdfs:domain rdf:resource="&duca;LampProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasIdentificationData -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasIdentificationData">
+        <rdfs:label>HasIdentificationData@it</rdfs:label>
+        <rdfs:comment>Consente di collegare un dispositivo ai propri dati identificativi@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;COC"/>
+        <rdfs:range rdf:resource="&duca;IdentificationData"/>
+        <rdfs:domain rdf:resource="&duca;LIN"/>
+        <rdfs:domain rdf:resource="&duca;Lamp"/>
+        <rdfs:domain rdf:resource="&duca;ModemPLC"/>
+        <rdfs:domain rdf:resource="&duca;Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasIdentificationType -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasIdentificationType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasIdentificationType@it</rdfs:label>
+        <rdfs:comment>Tipo del dato identificativo@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;IdentificationData"/>
+        <rdfs:range rdf:resource="&duca;IdentificationType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasLamp -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasLamp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasLamp@it</rdfs:label>
+        <rdfs:comment>Propriet? che collega un LIN alla lampada controllata@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;LIN"/>
+        <rdfs:range rdf:resource="&duca;Lamp"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasLampProfile -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasLampProfile">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasLampProfile@it</rdfs:label>
+        <rdfs:comment>Collega ogni singola strada (CIOC) con il suo profilo di illuminazione (ora:dimming)@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;COC"/>
+        <rdfs:range rdf:resource="&duca;LampProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasLampStatus -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasLampStatus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasLampStatus@it</rdfs:label>
+        <rdfs:comment>Collega una lampada con il suo stato di funzionamento@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;Lamp"/>
+        <rdfs:range rdf:resource="&duca;LampStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasLampType -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasLampType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasLampType@it</rdfs:label>
+        <rdfs:comment>Consente di specificare il tipo di lampada (es. SAP o LED)@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;Lamp"/>
+        <rdfs:range rdf:resource="&duca;LampType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasLocationData -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasLocationData">
+        <rdfs:label>HasLocationData@it</rdfs:label>
+        <rdfs:comment>Collega un elemento ai suoi dati di localizzazione@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;LIN"/>
+        <rdfs:range rdf:resource="&duca;LocationData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasMeasurand -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasMeasurand">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasMeasurand@it</rdfs:label>
+        <rdfs:comment>Lega un dato fornito da un sensore con la grandezza misurata@it</rdfs:comment>
+        <rdfs:range rdf:resource="&duca;Measurand"/>
+        <rdfs:domain rdf:resource="&duca;SensorData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasMessageDestination -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasMessageDestination">
+        <rdfs:label>HasMessageDestination@it</rdfs:label>
+        <rdfs:comment>Permette di specificare il destinatario di un messaggio@it</rdfs:comment>
+        <rdfs:range rdf:resource="&duca;COC"/>
+        <rdfs:domain rdf:resource="&duca;DimmingMessage"/>
+        <rdfs:domain rdf:resource="&duca;Message"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasModemPLC -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasModemPLC">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasModemPLC@it</rdfs:label>
+        <rdfs:comment>Lega un COC o un LIN al relativo modem PLC@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;COC"/>
+        <rdfs:domain rdf:resource="&duca;LIN"/>
+        <rdfs:range rdf:resource="&duca;ModemPLC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasSensor -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasSensor">
+        <rdfs:label>HasSensor@it</rdfs:label>
+        <rdfs:comment>Proprieta&#39; che stabilisce quali dispositivi hanno dei sensori@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;LIN"/>
+        <rdfs:range rdf:resource="&duca;Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasSensorData -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasSensorData">
+        <rdfs:label>HasSensorData@it</rdfs:label>
+        <rdfs:comment>Propriet? che lega un sensore ai dati che fornisce@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;Sensor"/>
+        <rdfs:range rdf:resource="&duca;SensorData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasUnitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="&duca;HasUnitOfMeasure">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>HasUnitOfMeasure@it</rdfs:label>
+        <rdfs:comment>Lega un dato di un sensore con la sua unita&#39; di misura@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;SensorData"/>
+        <rdfs:range rdf:resource="&duca;UnitOfMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#IsConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="&duca;IsConnectedTo">
+        <rdfs:label>IsConnectedTo@it</rdfs:label>
+        <rdfs:comment>Propriet? che lega un COC ai LIN ad esso collegati@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;COC"/>
+        <rdfs:range rdf:resource="&duca;LIN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#MessageForLIN -->
+
+    <owl:ObjectProperty rdf:about="&duca;MessageForLIN">
+        <rdfs:label>MessageForLIN@it</rdfs:label>
+        <rdfs:comment>Permette di specificare il LIN destinatario di un messaggio di dimming@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;DimmingMessage"/>
+        <rdfs:range rdf:resource="&duca;LIN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasActivationHour -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasActivationHour">
+        <rdfs:label>HasActivationHour@it</rdfs:label>
+        <rdfs:comment>Rappresenta l&#39;ora di settaggio del dimming nel seguente formato: CCYY-MM-DDThh:mm:ss@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;HourDimmingPair"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasAddress -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasAddress">
+        <rdfs:label>HasAddress@it</rdfs:label>
+        <rdfs:comment>Stringa identificativa dell&#39;indirizzo@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;LocationData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasDimmerValue -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasDimmerValue">
+        <rdfs:label>HasDimmerValue@it</rdfs:label>
+        <rdfs:comment>Rappresenta il valore di dimming di una lampada@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;DimmingMessage"/>
+        <rdfs:domain rdf:resource="&duca;HourDimmingPair"/>
+        <rdfs:domain rdf:resource="&duca;Lamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasIdentificationValue -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasIdentificationValue">
+        <rdfs:label>HasIdentificationValue@it</rdfs:label>
+        <rdfs:comment>Valore letterale di un dato identificativo@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;IdentificationData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasLatitude">
+        <rdfs:label>HasLatitude@it</rdfs:label>
+        <rdfs:comment>Latitudine espressa in gradi decimali@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;LocationData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasLongitude">
+        <rdfs:label>HasLongitude@it</rdfs:label>
+        <rdfs:comment>Longitudine espressa in gradi decimali@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;LocationData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasSensorDataValue -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasSensorDataValue">
+        <rdfs:label>HasSensorDataValue@it</rdfs:label>
+        <rdfs:comment>Valore numerico della grandezza fisica misurata@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;SensorData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="&duca;HasTimestamp">
+        <rdfs:label>HasTimestamp@it</rdfs:label>
+        <rdfs:comment>Timestamp del dato rilevato da un sensore nel formato CCYY-MM-DDThh:mm:ss@it</rdfs:comment>
+        <rdfs:domain rdf:resource="&duca;SensorData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#COC -->
+
+    <owl:Class rdf:about="&duca;COC">
+        <rdfs:label>COC@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Device"/>
+        <rdfs:comment>Nodo di controllo relativo ad una singola strada@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#Category -->
+
+    <owl:Class rdf:about="&duca;Category">
+        <rdfs:label>Category@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Data"/>
+        <rdfs:comment>Le sottoclassi di questa classe contengo elementi enumerabili (es. tipo di sensore, tipo di lampada, dati di identificazione)@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#Data -->
+
+    <owl:Class rdf:about="&duca;Data">
+        <rdfs:label>Data@it</rdfs:label>
+        <rdfs:comment>Classe che contiene tutti i dati@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#Device -->
+
+    <owl:Class rdf:about="&duca;Device">
+        <rdfs:label>Device@it</rdfs:label>
+        <rdfs:comment>Rappresenta un dispositivo generico@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#DimmingMessage -->
+
+    <owl:Class rdf:about="&duca;DimmingMessage">
+        <rdfs:label>DimmingMessage@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Message"/>
+        <rdfs:comment>Messaggio inviato dal centro ad un COC (es. impostare dimming di un lampione)@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair -->
+
+    <owl:Class rdf:about="&duca;HourDimmingPair">
+        <rdfs:label>HourDimmingPair@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Data"/>
+        <rdfs:comment>Rappresenta la coppia ora:dimming@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#IdentificationData -->
+
+    <owl:Class rdf:about="&duca;IdentificationData">
+        <rdfs:label>IdentificationData@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Data"/>
+        <rdfs:comment>Serve per identificare i vari elementi@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#IdentificationType -->
+
+    <owl:Class rdf:about="&duca;IdentificationType">
+        <rdfs:label>IdentificationType@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Category"/>
+        <rdfs:comment>Classe che contiene tutti i tipi di identificazione (es. MAC, ZigBee, RFID)@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#LIN -->
+
+    <owl:Class rdf:about="&duca;LIN">
+        <rdfs:label>LIN@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Device"/>
+        <rdfs:comment>Lampione intelligente@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#Lamp -->
+
+    <owl:Class rdf:about="&duca;Lamp">
+        <rdfs:label>Lamp@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Device"/>
+        <rdfs:comment>Rappresenta una generica lampada@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#LampProfile -->
+
+    <owl:Class rdf:about="&duca;LampProfile">
+        <rdfs:label>LampProfile@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Data"/>
+        <rdfs:comment>Rappresenta il profilo di una singola lampada, in cui vengono specificati i valori di intensita&#39; relativi alle varie fasce orarie@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#LampStatus -->
+
+    <owl:Class rdf:about="&duca;LampStatus">
+        <rdfs:label>LampStatus@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Category"/>
+        <rdfs:comment>Gli individui di questa classe rappresentano i vari stati di funzionamento di una lampada (es. funzionante, guasta)@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#LampType -->
+
+    <owl:Class rdf:about="&duca;LampType">
+        <rdfs:label>LampType@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Category"/>
+        <rdfs:comment>Permette di enumerare i diversi tipi di lampada@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#LocationData -->
+
+    <owl:Class rdf:about="&duca;LocationData">
+        <rdfs:label>LocationData@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Data"/>
+        <rdfs:comment>Dati relativi alla localizzazione dell&#39;elemento (es. Lat, Lon, Indirizzo)@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#Measurand -->
+
+    <owl:Class rdf:about="&duca;Measurand">
+        <rdfs:label>Measurand@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Category"/>
+        <rdfs:comment>Questa classe contiene le varie grandezze misurabili (es. temperatura, umidita&#39;, concentrazione, ...)@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#Message -->
+
+    <owl:Class rdf:about="&duca;Message">
+        <rdfs:label>Message@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Data"/>
+        <rdfs:comment>Messaggio di controllo generico@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#ModemPLC -->
+
+    <owl:Class rdf:about="&duca;ModemPLC">
+        <rdfs:label>ModemPLC@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Device"/>
+        <rdfs:comment>Utilizzato per descrivere un modem PLC@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#Sensor -->
+
+    <owl:Class rdf:about="&duca;Sensor">
+        <rdfs:label>Sensor@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Device"/>
+        <rdfs:comment>Rappresenta un generico sensore@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#SensorData -->
+
+    <owl:Class rdf:about="&duca;SensorData">
+        <rdfs:label>SensorData@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Data"/>
+        <rdfs:comment>Rappresenta i dati forniti dai sensori@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure -->
+
+    <owl:Class rdf:about="&duca;UnitOfMeasure">
+        <rdfs:label>UnitOfMeasure@it</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&duca;Category"/>
+        <rdfs:comment>Gli individui di questa classe rappresentano le varie unita&#39; di misura@it</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Property -->
+
+    <owl:Class rdf:about="&rdf;Property"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Class -->
+
+    <owl:Class rdf:about="&owl;Class"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#DatatypeProperty -->
+
+    <owl:Class rdf:about="&owl;DatatypeProperty"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#FunctionalProperty -->
+
+    <owl:Class rdf:about="&owl;FunctionalProperty"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#NamedIndividual -->
+
+    <owl:Class rdf:about="&owl;NamedIndividual"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#ObjectProperty -->
+
+    <owl:Class rdf:about="&owl;ObjectProperty"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Ontology -->
+
+    <owl:Class rdf:about="&owl;Ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://notauri/blank#COC_1003682592 -->
+
+    <owl:NamedIndividual rdf:about="&blank;COC_1003682592"/>
+    
+
+
+    <!-- http://notauri/blank#LIN_1977165703 -->
+
+    <owl:NamedIndividual rdf:about="&blank;LIN_1977165703"/>
+    
+
+
+    <!-- http://notauri/blank#LampProfile_1354296590 -->
+
+    <owl:NamedIndividual rdf:about="&blank;LampProfile_1354296590">
+        <HasHourDimmingPair rdf:resource="&duca;HourDimmingPair_1354296603"/>
+        <HasHourDimmingPair rdf:resource="&duca;HourDimmingPair_1354296622"/>
+        <HasHourDimmingPair rdf:resource="&duca;HourDimmingPair_1354296644"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#BOOL -->
+
+    <owl:NamedIndividual rdf:about="&duca;BOOL">
+        <rdf:type rdf:resource="&duca;UnitOfMeasure"/>
+        <rdfs:label>Booleano</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#BROKEN -->
+
+    <owl:NamedIndividual rdf:about="&duca;BROKEN">
+        <rdf:type rdf:resource="&duca;LampStatus"/>
+        <rdfs:label>BROKEN@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#CELSIUS -->
+
+    <owl:NamedIndividual rdf:about="&duca;CELSIUS">
+        <rdf:type rdf:resource="&duca;UnitOfMeasure"/>
+        <rdfs:label>°C@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#CO -->
+
+    <owl:NamedIndividual rdf:about="&duca;CO">
+        <rdf:type rdf:resource="&duca;Measurand"/>
+        <rdfs:label>CO@it</rdfs:label>
+        <rdfs:comment>Grammi di CO@it</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#CO2 -->
+
+    <owl:NamedIndividual rdf:about="&duca;CO2">
+        <rdf:type rdf:resource="&duca;Measurand"/>
+        <rdfs:label>CO2@it</rdfs:label>
+        <rdfs:comment>Grammi di CO2@it</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HUMIDITY -->
+
+    <owl:NamedIndividual rdf:about="&duca;HUMIDITY">
+        <rdf:type rdf:resource="&duca;Measurand"/>
+        <rdfs:label>Umidità@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296603 -->
+
+    <owl:NamedIndividual rdf:about="&duca;HourDimmingPair_1354296603"/>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296622 -->
+
+    <owl:NamedIndividual rdf:about="&duca;HourDimmingPair_1354296622"/>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296644 -->
+
+    <owl:NamedIndividual rdf:about="&duca;HourDimmingPair_1354296644"/>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#LED -->
+
+    <owl:NamedIndividual rdf:about="&duca;LED">
+        <rdf:type rdf:resource="&duca;LampType"/>
+        <rdfs:label>LED@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#MAC -->
+
+    <owl:NamedIndividual rdf:about="&duca;MAC">
+        <rdf:type rdf:resource="&duca;IdentificationType"/>
+        <rdfs:label>MAC@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#MG -->
+
+    <owl:NamedIndividual rdf:about="&duca;MG">
+        <rdf:type rdf:resource="&duca;UnitOfMeasure"/>
+        <rdfs:label>mg@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#OFF -->
+
+    <owl:NamedIndividual rdf:about="&duca;OFF">
+        <rdf:type rdf:resource="&duca;LampStatus"/>
+        <rdfs:label>OFF@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#ON -->
+
+    <owl:NamedIndividual rdf:about="&duca;ON">
+        <rdf:type rdf:resource="&duca;LampStatus"/>
+        <rdfs:label>ON@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#PERCENTAGE -->
+
+    <owl:NamedIndividual rdf:about="&duca;PERCENTAGE">
+        <rdf:type rdf:resource="&duca;UnitOfMeasure"/>
+        <rdfs:label>%@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#PLC -->
+
+    <owl:NamedIndividual rdf:about="&duca;PLC">
+        <rdf:type rdf:resource="&duca;IdentificationType"/>
+        <rdfs:label>PLC@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#PPM -->
+
+    <owl:NamedIndividual rdf:about="&duca;PPM">
+        <rdf:type rdf:resource="&duca;UnitOfMeasure"/>
+        <rdfs:label>ppm@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#PRESENCE -->
+
+    <owl:NamedIndividual rdf:about="&duca;PRESENCE">
+        <rdf:type rdf:resource="&duca;Measurand"/>
+        <rdfs:label>Presenza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#SAP -->
+
+    <owl:NamedIndividual rdf:about="&duca;SAP">
+        <rdf:type rdf:resource="&duca;LampType"/>
+        <rdfs:label>SAP@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#SERIALNUMBER -->
+
+    <owl:NamedIndividual rdf:about="&duca;SERIALNUMBER">
+        <rdf:type rdf:resource="&duca;IdentificationType"/>
+        <rdfs:label>SERIALNUMBER@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE -->
+
+    <owl:NamedIndividual rdf:about="&duca;TEMPERATURE">
+        <rdf:type rdf:resource="&duca;Measurand"/>
+        <rdfs:label>Temperatura@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#THRESHOLD -->
+
+    <owl:NamedIndividual rdf:about="&duca;THRESHOLD">
+        <rdf:type rdf:resource="&duca;UnitOfMeasure"/>
+        <rdfs:label>soglia@it</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ducatienergia.com/SIIP2P.owl#ZIGBEE -->
+
+    <owl:NamedIndividual rdf:about="&duca;ZIGBEE">
+        <rdf:type rdf:resource="&duca;IdentificationType"/>
+        <rdfs:label>ZIGBEE@it</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

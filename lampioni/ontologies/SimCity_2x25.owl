@@ -1,0 +1,2534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+	<!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+	<!ENTITY duca 'http://www.ducatienergia.com/SIIP2P.owl#'>
+	<!ENTITY blank 'http://notauri/blank#'>
+]>
+<rdf:RDF xmlns:rdfs="&rdfs;" xmlns:xsd="&xsd;" xmlns:owl="&owl;" xmlns:duca="&duca;" xmlns="http://www.ducatienergia.com/SIIP2P.owl#" xmlns:blank="&blank;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <owl:NamedIndividual rdf:about="&blank;COC_1003682592">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&blank;LampProfile_1354296590">
+    <HasHourDimmingPair rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296603" />
+    <HasHourDimmingPair rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296622" />
+    <HasHourDimmingPair rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296644" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="&blank;LIN_1977165703">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:Ontology rdf:about="http://www.ducatienergia.com/SIIP2P.owl">
+    <rdfs:comment>Ontologia per il sistema di illuminazione intelligenti punto-punto. Progetto la Citta' Pulita. Convenzione di ricerca tra Ducati Energia S.p.a e ARCES@it</rdfs:comment>
+    <owl:versionInfo>1.0@it</owl:versionInfo>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#BOOL">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure" />
+    <rdfs:label xml:lang="it">Booleano</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#BROKEN">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampStatus" />
+    <rdfs:label>BROKEN@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Category">
+    <rdfs:comment>Le sottoclassi di questa classe contengo elementi enumerabili (es. tipo di sensore, tipo di lampada, dati di identificazione)@it</rdfs:comment>
+    <rdfs:label>Category@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Data" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure" />
+    <rdfs:label>°C@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#CO">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Measurand" />
+    <rdfs:comment>Grammi di CO@it</rdfs:comment>
+    <rdfs:label>CO@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#CO2">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Measurand" />
+    <rdfs:comment>Grammi di CO2@it</rdfs:comment>
+    <rdfs:label>CO2@it</rdfs:label>
+  </owl:NamedIndividual>
+  <rdfs:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#COC">
+    <rdf:type rdf:resource="&owl;Class" />
+    <rdfs:comment>Nodo di controllo relativo ad una singola strada@it</rdfs:comment>
+    <rdfs:label>COC@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Device" />
+  </rdfs:Class>
+  <COC rdf:about="http://www.ducatienergia.com/SIIP2P.owl#COC_61">
+    <HasIdentificationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData_61" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_0" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_1" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_10" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_11" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_12" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_13" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_14" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_15" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_16" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_17" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_18" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_19" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_2" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_20" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_21" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_22" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_23" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_24" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_3" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_4" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_5" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_6" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_7" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_8" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_9" />
+    <rdfs:label>COC_61</rdfs:label>
+  </COC>
+  <COC rdf:about="http://www.ducatienergia.com/SIIP2P.owl#COC_62">
+    <HasIdentificationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData_62" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_0" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_1" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_10" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_11" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_12" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_13" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_14" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_15" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_16" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_17" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_18" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_19" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_2" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_20" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_21" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_22" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_23" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_24" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_3" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_4" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_5" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_6" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_7" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_8" />
+    <IsConnectedTo rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_9" />
+    <rdfs:label>COC_62</rdfs:label>
+  </COC>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Data">
+    <rdfs:comment>Classe che contiene tutti i dati@it</rdfs:comment>
+    <rdfs:label>Data@it</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Device">
+    <rdfs:comment>Rappresenta un dispositivo generico@it</rdfs:comment>
+    <rdfs:label>Device@it</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#DimmingMessage">
+    <rdfs:comment>Messaggio inviato dal centro ad un COC (es. impostare dimming di un lampione)@it</rdfs:comment>
+    <rdfs:label>DimmingMessage@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Message" />
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasActivationHour">
+    <rdfs:comment>Rappresenta l'ora di settaggio del dimming nel seguente formato: CCYY-MM-DDThh:mm:ss@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair" />
+    <rdfs:label>HasActivationHour@it</rdfs:label>
+  </owl:DatatypeProperty>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasAddress">
+    <rdf:type rdf:resource="&owl;DatatypeProperty" />
+    <rdfs:comment>Stringa identificativa dell'indirizzo@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData" />
+    <rdfs:label>HasAddress@it</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasDimmerValue">
+    <rdf:type rdf:resource="&owl;DatatypeProperty" />
+    <rdfs:comment>Rappresenta il valore di dimming di una lampada@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#DimmingMessage" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp" />
+    <rdfs:label>HasDimmerValue@it</rdfs:label>
+  </rdf:Property>
+  <owl:ObjectProperty rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasHourDimmingPair">
+    <rdfs:comment>Lega il profilo di una lampada alle varie coppie ora:dimming@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampProfile" />
+    <rdfs:label>HasHourDimmingPair@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair" />
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasIdentificationData">
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Consente di collegare un dispositivo ai propri dati identificativi@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#COC" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#ModemPLC" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor" />
+    <rdfs:label>HasIdentificationData@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasIdentificationType">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Tipo del dato identificativo@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData" />
+    <rdfs:label>HasIdentificationType@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationType" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasIdentificationValue">
+    <rdf:type rdf:resource="&owl;DatatypeProperty" />
+    <rdfs:comment>Valore letterale di un dato identificativo@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData" />
+    <rdfs:label>HasIdentificationValue@it</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasLamp">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Propriet? che collega un LIN alla lampada controllata@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN" />
+    <rdfs:label>HasLamp@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp" />
+  </rdf:Property>
+  <owl:ObjectProperty rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasLampProfile">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Collega ogni singola strada (CIOC) con il suo profilo di illuminazione (ora:dimming)@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#COC" />
+    <rdfs:label>HasLampProfile@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampProfile" />
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasLampStatus">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Collega una lampada con il suo stato di funzionamento@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp" />
+    <rdfs:label>HasLampStatus@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampStatus" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasLampType">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Consente di specificare il tipo di lampada (es. SAP o LED)@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp" />
+    <rdfs:label>HasLampType@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampType" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasLatitude">
+    <rdf:type rdf:resource="&owl;DatatypeProperty" />
+    <rdfs:comment>Latitudine espressa in gradi decimali@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData" />
+    <rdfs:label>HasLatitude@it</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasLocationData">
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Collega un elemento ai suoi dati di localizzazione@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN" />
+    <rdfs:label>HasLocationData@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasLongitude">
+    <rdf:type rdf:resource="&owl;DatatypeProperty" />
+    <rdfs:comment>Longitudine espressa in gradi decimali@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData" />
+    <rdfs:label>HasLongitude@it</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasMeasurand">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Lega un dato fornito da un sensore con la grandezza misurata@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData" />
+    <rdfs:label>HasMeasurand@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Measurand" />
+  </rdf:Property>
+  <owl:ObjectProperty rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasMessageDestination">
+    <rdfs:comment>Permette di specificare il destinatario di un messaggio@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#DimmingMessage" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Message" />
+    <rdfs:label>HasMessageDestination@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#COC" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasModemPLC">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdfs:comment>Lega un COC o un LIN al relativo modem PLC@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#COC" />
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN" />
+    <rdfs:label>HasModemPLC@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#ModemPLC" />
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasSensor">
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Proprieta' che stabilisce quali dispositivi hanno dei sensori@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN" />
+    <rdfs:label>HasSensor@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasSensorData">
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Propriet? che lega un sensore ai dati che fornisce@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor" />
+    <rdfs:label>HasSensorData@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasSensorDataValue">
+    <rdf:type rdf:resource="&owl;DatatypeProperty" />
+    <rdfs:comment>Valore numerico della grandezza fisica misurata@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData" />
+    <rdfs:label>HasSensorDataValue@it</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasTimestamp">
+    <rdf:type rdf:resource="&owl;DatatypeProperty" />
+    <rdfs:comment>Timestamp del dato rilevato da un sensore nel formato CCYY-MM-DDThh:mm:ss@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData" />
+    <rdfs:label>HasTimestamp@it</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HasUnitOfMeasure">
+    <rdf:type rdf:resource="&owl;FunctionalProperty" />
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Lega un dato di un sensore con la sua unita' di misura@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData" />
+    <rdfs:label>HasUnitOfMeasure@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure" />
+  </rdf:Property>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair">
+    <rdfs:comment>Rappresenta la coppia ora:dimming@it</rdfs:comment>
+    <rdfs:label>HourDimmingPair@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Data" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296603">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296622">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HourDimmingPair_1354296644">
+    <rdf:type rdf:resource="&owl;NamedIndividual" />
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#HUMIDITY">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Measurand" />
+    <rdfs:label>Umidità@it</rdfs:label>
+  </owl:NamedIndividual>
+  <rdfs:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData">
+    <rdf:type rdf:resource="&owl;Class" />
+    <rdfs:comment>Serve per identificare i vari elementi@it</rdfs:comment>
+    <rdfs:label>IdentificationData@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Data" />
+  </rdfs:Class>
+  <IdentificationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData_61">
+    <HasIdentificationType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#MAC" />
+    <HasIdentificationValue>61</HasIdentificationValue>
+    <rdfs:label>ID OF COC 61</rdfs:label>
+  </IdentificationData>
+  <IdentificationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#IdentificationData_62">
+    <HasIdentificationType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#MAC" />
+    <HasIdentificationValue>62</HasIdentificationValue>
+    <rdfs:label>ID OF COC 62</rdfs:label>
+  </IdentificationData>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#IdentificationType">
+    <rdfs:comment>Classe che contiene tutti i tipi di identificazione (es. MAC, ZigBee, RFID)@it</rdfs:comment>
+    <rdfs:label>IdentificationType@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Category" />
+  </owl:Class>
+  <rdf:Property rdf:about="http://www.ducatienergia.com/SIIP2P.owl#IsConnectedTo">
+    <rdf:type rdf:resource="&owl;ObjectProperty" />
+    <rdfs:comment>Propriet? che lega un COC ai LIN ad esso collegati@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#COC" />
+    <rdfs:label>IsConnectedTo@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN" />
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp">
+    <rdf:type rdf:resource="&owl;Class" />
+    <rdfs:comment>Rappresenta una generica lampada@it</rdfs:comment>
+    <rdfs:label>Lamp@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Device" />
+  </rdfs:Class>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_0">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,0@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_1">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,1@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_10">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,10@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_11">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,11@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_12">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,12@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_13">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,13@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_14">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,14@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_15">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,15@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_16">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,16@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_17">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,17@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_18">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,18@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_19">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,19@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_2">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,2@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_20">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,20@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_21">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,21@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_22">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,22@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_23">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,23@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_24">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,24@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_3">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,3@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_4">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,4@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_5">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,5@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_6">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,6@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_7">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,7@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_8">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,8@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_9">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_61,9@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_0">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,0@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_1">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,1@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_10">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,10@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_11">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,11@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_12">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,12@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_13">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,13@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_14">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,14@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_15">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,15@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_16">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,16@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_17">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,17@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_18">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,18@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_19">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,19@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_2">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,2@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_20">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,20@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_21">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,21@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_22">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,22@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_23">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,23@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_24">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,24@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_3">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,3@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_4">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,4@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_5">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,5@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_6">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,6@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_7">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,7@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_8">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,8@it</rdfs:label>
+  </Lamp>
+  <Lamp rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_9">
+    <HasDimmerValue>0</HasDimmerValue>
+    <HasLampStatus rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#OFF" />
+    <HasLampType rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LED" />
+    <rdfs:label>LAMP_62,9@it</rdfs:label>
+  </Lamp>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LampProfile">
+    <rdfs:comment>Rappresenta il profilo di una singola lampada, in cui vengono specificati i valori di intensita' relativi alle varie fasce orarie@it</rdfs:comment>
+    <rdfs:label>LampProfile@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Data" />
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LampStatus">
+    <rdfs:comment>Gli individui di questa classe rappresentano i vari stati di funzionamento di una lampada (es. funzionante, guasta)@it</rdfs:comment>
+    <rdfs:label>LampStatus@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Category" />
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LampType">
+    <rdfs:comment>Permette di enumerare i diversi tipi di lampada@it</rdfs:comment>
+    <rdfs:label>LampType@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Category" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LED">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampType" />
+    <rdfs:label>LED@it</rdfs:label>
+  </owl:NamedIndividual>
+  <rdfs:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN">
+    <rdf:type rdf:resource="&owl;Class" />
+    <rdfs:comment>Lampione intelligente@it</rdfs:comment>
+    <rdfs:label>LIN@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Device" />
+  </rdfs:Class>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_0">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_0" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_0" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_0" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_0" />
+    <rdfs:label>LIN_61,0@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_1">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_1" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_1" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_1" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_1" />
+    <rdfs:label>LIN_61,1@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_10">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_10" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_10" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_10" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_10" />
+    <rdfs:label>LIN_61,10@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_11">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_11" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_11" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_11" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_11" />
+    <rdfs:label>LIN_61,11@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_12">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_12" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_12" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_12" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_12" />
+    <rdfs:label>LIN_61,12@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_13">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_13" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_13" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_13" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_13" />
+    <rdfs:label>LIN_61,13@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_14">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_14" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_14" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_14" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_14" />
+    <rdfs:label>LIN_61,14@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_15">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_15" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_15" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_15" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_15" />
+    <rdfs:label>LIN_61,15@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_16">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_16" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_16" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_16" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_16" />
+    <rdfs:label>LIN_61,16@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_17">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_17" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_17" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_17" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_17" />
+    <rdfs:label>LIN_61,17@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_18">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_18" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_18" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_18" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_18" />
+    <rdfs:label>LIN_61,18@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_19">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_19" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_19" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_19" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_19" />
+    <rdfs:label>LIN_61,19@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_2">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_2" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_2" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_2" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_2" />
+    <rdfs:label>LIN_61,2@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_20">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_20" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_20" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_20" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_20" />
+    <rdfs:label>LIN_61,20@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_21">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_21" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_21" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_21" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_21" />
+    <rdfs:label>LIN_61,21@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_22">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_22" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_22" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_22" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_22" />
+    <rdfs:label>LIN_61,22@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_23">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_23" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_23" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_23" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_23" />
+    <rdfs:label>LIN_61,23@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_24">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_24" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_24" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_24" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_24" />
+    <rdfs:label>LIN_61,24@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_3">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_3" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_3" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_3" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_3" />
+    <rdfs:label>LIN_61,3@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_4">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_4" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_4" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_4" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_4" />
+    <rdfs:label>LIN_61,4@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_5">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_5" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_5" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_5" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_5" />
+    <rdfs:label>LIN_61,5@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_6">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_6" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_6" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_6" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_6" />
+    <rdfs:label>LIN_61,6@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_7">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_7" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_7" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_7" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_7" />
+    <rdfs:label>LIN_61,7@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_8">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_8" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_8" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_8" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_8" />
+    <rdfs:label>LIN_61,8@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_61_9">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_61_9" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_9" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_9" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_9" />
+    <rdfs:label>LIN_61,9@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_0">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_0" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_0" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_0" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_0" />
+    <rdfs:label>LIN_62,0@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_1">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_1" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_1" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_1" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_1" />
+    <rdfs:label>LIN_62,1@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_10">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_10" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_10" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_10" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_10" />
+    <rdfs:label>LIN_62,10@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_11">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_11" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_11" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_11" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_11" />
+    <rdfs:label>LIN_62,11@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_12">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_12" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_12" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_12" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_12" />
+    <rdfs:label>LIN_62,12@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_13">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_13" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_13" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_13" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_13" />
+    <rdfs:label>LIN_62,13@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_14">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_14" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_14" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_14" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_14" />
+    <rdfs:label>LIN_62,14@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_15">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_15" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_15" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_15" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_15" />
+    <rdfs:label>LIN_62,15@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_16">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_16" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_16" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_16" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_16" />
+    <rdfs:label>LIN_62,16@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_17">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_17" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_17" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_17" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_17" />
+    <rdfs:label>LIN_62,17@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_18">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_18" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_18" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_18" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_18" />
+    <rdfs:label>LIN_62,18@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_19">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_19" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_19" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_19" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_19" />
+    <rdfs:label>LIN_62,19@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_2">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_2" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_2" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_2" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_2" />
+    <rdfs:label>LIN_62,2@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_20">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_20" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_20" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_20" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_20" />
+    <rdfs:label>LIN_62,20@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_21">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_21" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_21" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_21" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_21" />
+    <rdfs:label>LIN_62,21@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_22">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_22" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_22" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_22" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_22" />
+    <rdfs:label>LIN_62,22@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_23">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_23" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_23" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_23" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_23" />
+    <rdfs:label>LIN_62,23@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_24">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_24" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_24" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_24" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_24" />
+    <rdfs:label>LIN_62,24@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_3">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_3" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_3" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_3" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_3" />
+    <rdfs:label>LIN_62,3@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_4">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_4" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_4" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_4" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_4" />
+    <rdfs:label>LIN_62,4@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_5">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_5" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_5" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_5" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_5" />
+    <rdfs:label>LIN_62,5@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_6">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_6" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_6" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_6" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_6" />
+    <rdfs:label>LIN_62,6@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_7">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_7" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_7" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_7" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_7" />
+    <rdfs:label>LIN_62,7@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_8">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_8" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_8" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_8" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_8" />
+    <rdfs:label>LIN_62,8@it</rdfs:label>
+  </LIN>
+  <LIN rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LIN_62_9">
+    <HasLamp rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Lamp_62_9" />
+    <HasLocationData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_9" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_9" />
+    <HasSensor rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_9" />
+    <rdfs:label>LIN_62,9@it</rdfs:label>
+  </LIN>
+  <rdfs:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData">
+    <rdf:type rdf:resource="&owl;Class" />
+    <rdfs:comment>Dati relativi alla localizzazione dell'elemento (es. Lat, Lon, Indirizzo)@it</rdfs:comment>
+    <rdfs:label>LocationData@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Data" />
+  </rdfs:Class>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_0">
+    <HasAddress>LIN address -60,-180</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-180</HasLongitude>
+    <rdfs:label>Location (61,0)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_1">
+    <HasAddress>LIN address -60,-165.6</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-165.6</HasLongitude>
+    <rdfs:label>Location (61,1)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_10">
+    <HasAddress>LIN address -60,-36.00001</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-36.00001</HasLongitude>
+    <rdfs:label>Location (61,10)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_11">
+    <HasAddress>LIN address -60,-21.60001</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-21.60001</HasLongitude>
+    <rdfs:label>Location (61,11)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_12">
+    <HasAddress>LIN address -60,-7.200008</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-7.200008</HasLongitude>
+    <rdfs:label>Location (61,12)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_13">
+    <HasAddress>LIN address -60,7.199991</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>7.199991</HasLongitude>
+    <rdfs:label>Location (61,13)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_14">
+    <HasAddress>LIN address -60,21.59999</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>21.59999</HasLongitude>
+    <rdfs:label>Location (61,14)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_15">
+    <HasAddress>LIN address -60,35.99999</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>35.99999</HasLongitude>
+    <rdfs:label>Location (61,15)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_16">
+    <HasAddress>LIN address -60,50.39999</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>50.39999</HasLongitude>
+    <rdfs:label>Location (61,16)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_17">
+    <HasAddress>LIN address -60,64.8</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>64.8</HasLongitude>
+    <rdfs:label>Location (61,17)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_18">
+    <HasAddress>LIN address -60,79.2</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>79.2</HasLongitude>
+    <rdfs:label>Location (61,18)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_19">
+    <HasAddress>LIN address -60,93.6</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>93.6</HasLongitude>
+    <rdfs:label>Location (61,19)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_2">
+    <HasAddress>LIN address -60,-151.2</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-151.2</HasLongitude>
+    <rdfs:label>Location (61,2)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_20">
+    <HasAddress>LIN address -60,108</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>108</HasLongitude>
+    <rdfs:label>Location (61,20)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_21">
+    <HasAddress>LIN address -60,122.4</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>122.4</HasLongitude>
+    <rdfs:label>Location (61,21)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_22">
+    <HasAddress>LIN address -60,136.8</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>136.8</HasLongitude>
+    <rdfs:label>Location (61,22)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_23">
+    <HasAddress>LIN address -60,151.2</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>151.2</HasLongitude>
+    <rdfs:label>Location (61,23)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_24">
+    <HasAddress>LIN address -60,165.6</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>165.6</HasLongitude>
+    <rdfs:label>Location (61,24)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_3">
+    <HasAddress>LIN address -60,-136.8</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-136.8</HasLongitude>
+    <rdfs:label>Location (61,3)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_4">
+    <HasAddress>LIN address -60,-122.4</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-122.4</HasLongitude>
+    <rdfs:label>Location (61,4)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_5">
+    <HasAddress>LIN address -60,-108</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-108</HasLongitude>
+    <rdfs:label>Location (61,5)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_6">
+    <HasAddress>LIN address -60,-93.60001</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-93.60001</HasLongitude>
+    <rdfs:label>Location (61,6)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_7">
+    <HasAddress>LIN address -60,-79.20001</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-79.20001</HasLongitude>
+    <rdfs:label>Location (61,7)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_8">
+    <HasAddress>LIN address -60,-64.80001</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-64.80001</HasLongitude>
+    <rdfs:label>Location (61,8)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_61_9">
+    <HasAddress>LIN address -60,-50.40001</HasAddress>
+    <HasLatitude>-60</HasLatitude>
+    <HasLongitude>-50.40001</HasLongitude>
+    <rdfs:label>Location (61,9)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_0">
+    <HasAddress>LIN address 10,-180</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-180</HasLongitude>
+    <rdfs:label>Location (62,0)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_1">
+    <HasAddress>LIN address 10,-165.6</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-165.6</HasLongitude>
+    <rdfs:label>Location (62,1)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_10">
+    <HasAddress>LIN address 10,-36.00001</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-36.00001</HasLongitude>
+    <rdfs:label>Location (62,10)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_11">
+    <HasAddress>LIN address 10,-21.60001</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-21.60001</HasLongitude>
+    <rdfs:label>Location (62,11)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_12">
+    <HasAddress>LIN address 10,-7.200008</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-7.200008</HasLongitude>
+    <rdfs:label>Location (62,12)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_13">
+    <HasAddress>LIN address 10,7.199991</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>7.199991</HasLongitude>
+    <rdfs:label>Location (62,13)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_14">
+    <HasAddress>LIN address 10,21.59999</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>21.59999</HasLongitude>
+    <rdfs:label>Location (62,14)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_15">
+    <HasAddress>LIN address 10,35.99999</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>35.99999</HasLongitude>
+    <rdfs:label>Location (62,15)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_16">
+    <HasAddress>LIN address 10,50.39999</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>50.39999</HasLongitude>
+    <rdfs:label>Location (62,16)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_17">
+    <HasAddress>LIN address 10,64.8</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>64.8</HasLongitude>
+    <rdfs:label>Location (62,17)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_18">
+    <HasAddress>LIN address 10,79.2</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>79.2</HasLongitude>
+    <rdfs:label>Location (62,18)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_19">
+    <HasAddress>LIN address 10,93.6</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>93.6</HasLongitude>
+    <rdfs:label>Location (62,19)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_2">
+    <HasAddress>LIN address 10,-151.2</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-151.2</HasLongitude>
+    <rdfs:label>Location (62,2)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_20">
+    <HasAddress>LIN address 10,108</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>108</HasLongitude>
+    <rdfs:label>Location (62,20)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_21">
+    <HasAddress>LIN address 10,122.4</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>122.4</HasLongitude>
+    <rdfs:label>Location (62,21)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_22">
+    <HasAddress>LIN address 10,136.8</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>136.8</HasLongitude>
+    <rdfs:label>Location (62,22)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_23">
+    <HasAddress>LIN address 10,151.2</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>151.2</HasLongitude>
+    <rdfs:label>Location (62,23)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_24">
+    <HasAddress>LIN address 10,165.6</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>165.6</HasLongitude>
+    <rdfs:label>Location (62,24)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_3">
+    <HasAddress>LIN address 10,-136.8</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-136.8</HasLongitude>
+    <rdfs:label>Location (62,3)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_4">
+    <HasAddress>LIN address 10,-122.4</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-122.4</HasLongitude>
+    <rdfs:label>Location (62,4)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_5">
+    <HasAddress>LIN address 10,-108</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-108</HasLongitude>
+    <rdfs:label>Location (62,5)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_6">
+    <HasAddress>LIN address 10,-93.60001</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-93.60001</HasLongitude>
+    <rdfs:label>Location (62,6)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_7">
+    <HasAddress>LIN address 10,-79.20001</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-79.20001</HasLongitude>
+    <rdfs:label>Location (62,7)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_8">
+    <HasAddress>LIN address 10,-64.80001</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-64.80001</HasLongitude>
+    <rdfs:label>Location (62,8)@it</rdfs:label>
+  </LocationData>
+  <LocationData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#LocationData_62_9">
+    <HasAddress>LIN address 10,-50.40001</HasAddress>
+    <HasLatitude>10</HasLatitude>
+    <HasLongitude>-50.40001</HasLongitude>
+    <rdfs:label>Location (62,9)@it</rdfs:label>
+  </LocationData>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#MAC">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationType" />
+    <rdfs:label>MAC@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Measurand">
+    <rdfs:comment>Questa classe contiene le varie grandezze misurabili (es. temperatura, umidita', concentrazione, ...)@it</rdfs:comment>
+    <rdfs:label>Measurand@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Category" />
+  </owl:Class>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Message">
+    <rdfs:comment>Messaggio di controllo generico@it</rdfs:comment>
+    <rdfs:label>Message@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Data" />
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.ducatienergia.com/SIIP2P.owl#MessageForLIN">
+    <rdfs:comment>Permette di specificare il LIN destinatario di un messaggio di dimming@it</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#DimmingMessage" />
+    <rdfs:label>MessageForLIN@it</rdfs:label>
+    <rdfs:range rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LIN" />
+  </owl:ObjectProperty>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#MG">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure" />
+    <rdfs:label>mg@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#ModemPLC">
+    <rdfs:comment>Utilizzato per descrivere un modem PLC@it</rdfs:comment>
+    <rdfs:label>ModemPLC@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Device" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#OFF">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampStatus" />
+    <rdfs:label>OFF@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#ON">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampStatus" />
+    <rdfs:label>ON@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#PERCENTAGE">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure" />
+    <rdfs:label>%@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#PLC">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationType" />
+    <rdfs:label>PLC@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#PPM">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure" />
+    <rdfs:label>ppm@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Measurand" />
+    <rdfs:label xml:lang="it">Presenza</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SAP">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#LampType" />
+    <rdfs:label>SAP@it</rdfs:label>
+  </owl:NamedIndividual>
+  <rdfs:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor">
+    <rdf:type rdf:resource="&owl;Class" />
+    <rdfs:comment>Rappresenta un generico sensore@it</rdfs:comment>
+    <rdfs:label>Sensor@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Device" />
+  </rdfs:Class>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_0">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_0" />
+    <rdfs:label>SENSOR_PRES_61,0@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_1">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_1" />
+    <rdfs:label>SENSOR_PRES_61,1@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_10">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_10" />
+    <rdfs:label>SENSOR_PRES_61,10@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_11">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_11" />
+    <rdfs:label>SENSOR_PRES_61,11@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_12">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_12" />
+    <rdfs:label>SENSOR_PRES_61,12@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_13">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_13" />
+    <rdfs:label>SENSOR_PRES_61,13@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_14">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_14" />
+    <rdfs:label>SENSOR_PRES_61,14@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_15">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_15" />
+    <rdfs:label>SENSOR_PRES_61,15@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_16">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_16" />
+    <rdfs:label>SENSOR_PRES_61,16@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_17">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_17" />
+    <rdfs:label>SENSOR_PRES_61,17@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_18">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_18" />
+    <rdfs:label>SENSOR_PRES_61,18@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_19">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_19" />
+    <rdfs:label>SENSOR_PRES_61,19@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_2">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_2" />
+    <rdfs:label>SENSOR_PRES_61,2@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_20">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_20" />
+    <rdfs:label>SENSOR_PRES_61,20@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_21">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_21" />
+    <rdfs:label>SENSOR_PRES_61,21@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_22">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_22" />
+    <rdfs:label>SENSOR_PRES_61,22@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_23">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_23" />
+    <rdfs:label>SENSOR_PRES_61,23@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_24">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_24" />
+    <rdfs:label>SENSOR_PRES_61,24@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_3">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_3" />
+    <rdfs:label>SENSOR_PRES_61,3@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_4">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_4" />
+    <rdfs:label>SENSOR_PRES_61,4@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_5">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_5" />
+    <rdfs:label>SENSOR_PRES_61,5@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_6">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_6" />
+    <rdfs:label>SENSOR_PRES_61,6@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_7">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_7" />
+    <rdfs:label>SENSOR_PRES_61,7@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_8">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_8" />
+    <rdfs:label>SENSOR_PRES_61,8@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_61_9">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_9" />
+    <rdfs:label>SENSOR_PRES_61,9@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_0">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_0" />
+    <rdfs:label>SENSOR_PRES_62,0@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_1">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_1" />
+    <rdfs:label>SENSOR_PRES_62,1@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_10">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_10" />
+    <rdfs:label>SENSOR_PRES_62,10@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_11">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_11" />
+    <rdfs:label>SENSOR_PRES_62,11@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_12">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_12" />
+    <rdfs:label>SENSOR_PRES_62,12@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_13">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_13" />
+    <rdfs:label>SENSOR_PRES_62,13@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_14">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_14" />
+    <rdfs:label>SENSOR_PRES_62,14@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_15">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_15" />
+    <rdfs:label>SENSOR_PRES_62,15@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_16">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_16" />
+    <rdfs:label>SENSOR_PRES_62,16@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_17">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_17" />
+    <rdfs:label>SENSOR_PRES_62,17@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_18">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_18" />
+    <rdfs:label>SENSOR_PRES_62,18@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_19">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_19" />
+    <rdfs:label>SENSOR_PRES_62,19@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_2">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_2" />
+    <rdfs:label>SENSOR_PRES_62,2@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_20">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_20" />
+    <rdfs:label>SENSOR_PRES_62,20@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_21">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_21" />
+    <rdfs:label>SENSOR_PRES_62,21@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_22">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_22" />
+    <rdfs:label>SENSOR_PRES_62,22@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_23">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_23" />
+    <rdfs:label>SENSOR_PRES_62,23@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_24">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_24" />
+    <rdfs:label>SENSOR_PRES_62,24@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_3">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_3" />
+    <rdfs:label>SENSOR_PRES_62,3@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_4">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_4" />
+    <rdfs:label>SENSOR_PRES_62,4@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_5">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_5" />
+    <rdfs:label>SENSOR_PRES_62,5@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_6">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_6" />
+    <rdfs:label>SENSOR_PRES_62,6@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_7">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_7" />
+    <rdfs:label>SENSOR_PRES_62,7@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_8">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_8" />
+    <rdfs:label>SENSOR_PRES_62,8@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_PRES_62_9">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_9" />
+    <rdfs:label>SENSOR_PRES_62,9@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_0">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_0" />
+    <rdfs:label>SENSOR_TEMP_61,0@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_1">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_1" />
+    <rdfs:label>SENSOR_TEMP_61,1@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_10">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_10" />
+    <rdfs:label>SENSOR_TEMP_61,10@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_11">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_11" />
+    <rdfs:label>SENSOR_TEMP_61,11@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_12">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_12" />
+    <rdfs:label>SENSOR_TEMP_61,12@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_13">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_13" />
+    <rdfs:label>SENSOR_TEMP_61,13@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_14">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_14" />
+    <rdfs:label>SENSOR_TEMP_61,14@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_15">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_15" />
+    <rdfs:label>SENSOR_TEMP_61,15@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_16">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_16" />
+    <rdfs:label>SENSOR_TEMP_61,16@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_17">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_17" />
+    <rdfs:label>SENSOR_TEMP_61,17@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_18">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_18" />
+    <rdfs:label>SENSOR_TEMP_61,18@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_19">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_19" />
+    <rdfs:label>SENSOR_TEMP_61,19@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_2">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_2" />
+    <rdfs:label>SENSOR_TEMP_61,2@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_20">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_20" />
+    <rdfs:label>SENSOR_TEMP_61,20@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_21">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_21" />
+    <rdfs:label>SENSOR_TEMP_61,21@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_22">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_22" />
+    <rdfs:label>SENSOR_TEMP_61,22@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_23">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_23" />
+    <rdfs:label>SENSOR_TEMP_61,23@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_24">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_24" />
+    <rdfs:label>SENSOR_TEMP_61,24@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_3">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_3" />
+    <rdfs:label>SENSOR_TEMP_61,3@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_4">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_4" />
+    <rdfs:label>SENSOR_TEMP_61,4@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_5">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_5" />
+    <rdfs:label>SENSOR_TEMP_61,5@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_6">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_6" />
+    <rdfs:label>SENSOR_TEMP_61,6@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_7">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_7" />
+    <rdfs:label>SENSOR_TEMP_61,7@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_8">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_8" />
+    <rdfs:label>SENSOR_TEMP_61,8@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_61_9">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_9" />
+    <rdfs:label>SENSOR_TEMP_61,9@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_0">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_0" />
+    <rdfs:label>SENSOR_TEMP_62,0@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_1">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_1" />
+    <rdfs:label>SENSOR_TEMP_62,1@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_10">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_10" />
+    <rdfs:label>SENSOR_TEMP_62,10@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_11">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_11" />
+    <rdfs:label>SENSOR_TEMP_62,11@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_12">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_12" />
+    <rdfs:label>SENSOR_TEMP_62,12@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_13">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_13" />
+    <rdfs:label>SENSOR_TEMP_62,13@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_14">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_14" />
+    <rdfs:label>SENSOR_TEMP_62,14@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_15">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_15" />
+    <rdfs:label>SENSOR_TEMP_62,15@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_16">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_16" />
+    <rdfs:label>SENSOR_TEMP_62,16@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_17">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_17" />
+    <rdfs:label>SENSOR_TEMP_62,17@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_18">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_18" />
+    <rdfs:label>SENSOR_TEMP_62,18@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_19">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_19" />
+    <rdfs:label>SENSOR_TEMP_62,19@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_2">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_2" />
+    <rdfs:label>SENSOR_TEMP_62,2@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_20">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_20" />
+    <rdfs:label>SENSOR_TEMP_62,20@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_21">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_21" />
+    <rdfs:label>SENSOR_TEMP_62,21@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_22">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_22" />
+    <rdfs:label>SENSOR_TEMP_62,22@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_23">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_23" />
+    <rdfs:label>SENSOR_TEMP_62,23@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_24">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_24" />
+    <rdfs:label>SENSOR_TEMP_62,24@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_3">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_3" />
+    <rdfs:label>SENSOR_TEMP_62,3@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_4">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_4" />
+    <rdfs:label>SENSOR_TEMP_62,4@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_5">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_5" />
+    <rdfs:label>SENSOR_TEMP_62,5@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_6">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_6" />
+    <rdfs:label>SENSOR_TEMP_62,6@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_7">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_7" />
+    <rdfs:label>SENSOR_TEMP_62,7@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_8">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_8" />
+    <rdfs:label>SENSOR_TEMP_62,8@it</rdfs:label>
+  </Sensor>
+  <Sensor rdf:about="http://www.ducatienergia.com/SIIP2P.owl#Sensor_TEMP_62_9">
+    <HasSensorData rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_9" />
+    <rdfs:label>SENSOR_TEMP_62,9@it</rdfs:label>
+  </Sensor>
+  <rdfs:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData">
+    <rdf:type rdf:resource="&owl;Class" />
+    <rdfs:comment>Rappresenta i dati forniti dai sensori@it</rdfs:comment>
+    <rdfs:label>SensorData@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Data" />
+  </rdfs:Class>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_0">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,0@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_1">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,1@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_10">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,10@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_11">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,11@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_12">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,12@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_13">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,13@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_14">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,14@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_15">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,15@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_16">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,16@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_17">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,17@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_18">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,18@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_19">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,19@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_2">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,2@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_20">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,20@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_21">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,21@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_22">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,22@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_23">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,23@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_24">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,24@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_3">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,3@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_4">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,4@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_5">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,5@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_6">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,6@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_7">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,7@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_8">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,8@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_61_9">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_61,9@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_0">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,0@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_1">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,1@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_10">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,10@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_11">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,11@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_12">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,12@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_13">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,13@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_14">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,14@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_15">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,15@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_16">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,16@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_17">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,17@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_18">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,18@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_19">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,19@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_2">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,2@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_20">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,20@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_21">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,21@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_22">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,22@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_23">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,23@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_24">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,24@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_3">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,3@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_4">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,4@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_5">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,5@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_6">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,6@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_7">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,7@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_8">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,8@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_PRES_62_9">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#PRESENCE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#BOOL" />
+    <rdfs:label>SensorData_PRES_62,9@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_0">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,0@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_1">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,1@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_10">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,10@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_11">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,11@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_12">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,12@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_13">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,13@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_14">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,14@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_15">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,15@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_16">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,16@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_17">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,17@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_18">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,18@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_19">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,19@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_2">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,2@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_20">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,20@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_21">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,21@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_22">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,22@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_23">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,23@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_24">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,24@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_3">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,3@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_4">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,4@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_5">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,5@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_6">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,6@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_7">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,7@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_8">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,8@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_61_9">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_61,9@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_0">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,0@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_1">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,1@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_10">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,10@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_11">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,11@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_12">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,12@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_13">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,13@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_14">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,14@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_15">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,15@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_16">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,16@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_17">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,17@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_18">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,18@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_19">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,19@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_2">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,2@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_20">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,20@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_21">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,21@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_22">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,22@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_23">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,23@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_24">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,24@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_3">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,3@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_4">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,4@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_5">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,5@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_6">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,6@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_7">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,7@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_8">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,8@it</rdfs:label>
+  </SensorData>
+  <SensorData rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SensorData_TEMP_62_9">
+    <HasMeasurand rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE" />
+    <HasSensorDataValue>??</HasSensorDataValue>
+    <HasTimestamp>??</HasTimestamp>
+    <HasUnitOfMeasure rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#CELSIUS" />
+    <rdfs:label>SensorData_TEMP_62,9@it</rdfs:label>
+  </SensorData>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#SERIALNUMBER">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationType" />
+    <rdfs:label>SERIALNUMBER@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#TEMPERATURE">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Measurand" />
+    <rdfs:label>Temperatura@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#THRESHOLD">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure" />
+    <rdfs:label>soglia@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="http://www.ducatienergia.com/SIIP2P.owl#UnitOfMeasure">
+    <rdfs:comment>Gli individui di questa classe rappresentano le varie unita' di misura@it</rdfs:comment>
+    <rdfs:label>UnitOfMeasure@it</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#Category" />
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.ducatienergia.com/SIIP2P.owl#ZIGBEE">
+    <rdf:type rdf:resource="http://www.ducatienergia.com/SIIP2P.owl#IdentificationType" />
+    <rdfs:label>ZIGBEE@it</rdfs:label>
+  </owl:NamedIndividual>
+  <owl:Class rdf:about="&rdf;Property">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <rdf:Property rdf:about="&rdfs;label">
+    <rdf:type rdf:resource="&rdf;Property" />
+  </rdf:Property>
+  <owl:Class rdf:about="&owl;Class">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;DatatypeProperty">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;FunctionalProperty">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;NamedIndividual">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;ObjectProperty">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+  <owl:Class rdf:about="&owl;Ontology">
+    <rdf:type rdf:resource="&owl;Class" />
+  </owl:Class>
+</rdf:RDF>
