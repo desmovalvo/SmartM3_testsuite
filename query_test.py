@@ -149,6 +149,12 @@ for kp in kp_list:
             print e.__str__()
             query_time = 0
 
+            if i == (iterations-1):
+                
+                # check the number of results
+                query_results_number[kp_list.index(kp)] = 0
+
+
         query_results[kp_list.index(kp)].append(query_time)
 
     # compute the average
