@@ -1,27 +1,28 @@
 #!/usr/bin/python
 
 import sys
+import glob
 import time
 import getopt
 import rdflib
 import datetime
 import traceback
+from output_helpers import *
 from smart_m3.m3_kp_api import *
 
 sib_ip = "localhost"
 sib_port = 7701
-kp = m3_kp_api(False, sib_ip, sib_port)
 triple_list = []
 total_triple = 0
 elapsed_time = 0
 owl_list = []
-
-### READ COMMAND LINE PARAMETERS
-
 step = 100
 clean = False
 
-options, remainder = getopt.getopt(sys.argv[1:], 's:i:clhp:t:o:', ['sib=', 'iterations=', 'clean', 'step=', 'owlfolder='])
+### READ COMMAND LINE PARAMETERS
+
+cprint(True, "Pre-Test", "Reading command line arguments")
+options, remainder = getopt.getopt(sys.argv[1:], 's:ct:o:', ['sib=', 'clean', 'step=', 'owlfolder='])
 for opt, arg in options:
 
     if opt in ('-p', '--step'):
@@ -33,20 +34,34 @@ for opt, arg in options:
 
     elif opt in ('-s', '--sib'):
         sib = arg    
+        global sib_ip
+        global sib_port
         sib_ip = sib.split(":")[0]
         sib_port = int(sib.split(":")[1])
 
     elif opt in ('-c', '--clean'):
         clean = True
 
-    elif opt in ('-h', '--help'):
-        print help_string
-        sys.exit()
+
+### CONNECT TO THE SIB
+cprint(True, "Pre-Test", "Connecting to %s:%s" % (sib_ip, sib_port))
+try:
+    kp = m3_kp_api(False, sib_ip, sib_port)
+except Exception as e:
+    print e.__str__()
+    sys.exit()
+
+
+### CLEAN
+if clean:
+    cprint(True, "Pre-Test", "Cleaning the sib")
+    kp.load_rdf_remove([Triple(None, None, None)])
 
 ### PROCESSING THE FILE
-
-g = rdflib.Graph()
 for owl_file in owl_list:
+
+    cprint(True, "Test", "Inserting owl file %s" % (owl_file))
+    g = rdflib.Graph()
     g.parse(owl_file,  format='application/rdf+xml')
     
     for triple in g:
@@ -73,8 +88,8 @@ for owl_file in owl_list:
         triple_list.append(a)
         if len(triple_list) == 100:
             try:
-                print ".",
                 start_time = int(round(time.time() * 1000))
+                cprint(True, "Test", "[%s] Inserting %s triples (%s) [%s/%s]" % (total_triple, step, owl_file, owl_list.index(owl_file)+1, len(owl_list)))
                 kp.load_rdf_insert(triple_list)
                 end_time = int(round(time.time() * 1000))
                 elapsed_time = elapsed_time + (end_time - start_time)
@@ -87,19 +102,19 @@ for owl_file in owl_list:
             triple_list = []
             
     if len(triple_list) > 0:
-        print ".",
         total_triple = total_triple + len(triple_list)
         start_time = int(round(time.time() * 1000))
+        cprint(True, "Test", "[%s] Inserting %s triples (%s) [%s/%s]" % (total_triple, len(triple_list), owl_file, owl_list.index(owl_file)+1, len(owl_list)))
         kp.load_rdf_insert(triple_list)
         end_time = int(round(time.time() * 1000))
         elapsed_time = elapsed_time + (end_time - start_time)
     
-    kp.load_query_sparql("""SELECT (COUNT(?x) as ?num)
-    WHERE {?x ?y ?z}""")
-    
 
 # END OF GAMES
 
+kp.load_query_sparql("""SELECT (COUNT(?x) as ?num)
+WHERE {?x ?y ?z}""")
+    
 print "Triple inserted: %s" % (total_triple)
 print "Triple into the SIB: %s" % (kp.result_sparql_query[0][0][2])
 print "Elapsed time: %s ms " % (elapsed_time)
